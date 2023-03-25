@@ -53,6 +53,10 @@ body{
     font-family: 'Quicksand', sans-serif;
 }
 
+header{
+    overflow: hidden !important; /* The whole purpose of this is to remove horizontal scrolling on smaller viewports*/
+}
+
 .special-h-style{
     color: var(--lightred);
 }
