@@ -1,0 +1,303 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&family=Tilt+Neon&display=swap');
+
+/*
+
+font-family: 'Quicksand', sans-serif;
+font-family: 'Tilt Neon', cursive;
+
+*/
+
+/*
+    CSS Styling Format:
+ -  General Styling
+ -  Navbar Styling
+ -  Hero Image Styling
+
+
+*/
+
+/** START OF GENERAL STYLING **/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+:root{
+    --darkgray:  #1b1b1b;
+    --lightgray: #444444;
+    --lightred:  #f81528;
+    --darkgold: rgb(230, 197, 12);
+}
+
+html{
+    height: 100%;
+    animation: transitionIn .5s;
+}
+
+/* Will create a transition after reloading the page / first visiting a page*/
+@keyframes transitionIn {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+
+}
+
+body{
+    min-height: 100%;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.special-h-style{
+    color: var(--lightred);
+}
+
+/** END OF GENERAL STYLING **/
+
+/** START OF NAVBAR STYLES **/
+
+#main-nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    background-color: var(--darkgray);
+    width: 100%;
+    top: 0;
+    position: fixed;
+    overflow: hidden;
+    z-index: 999999;
+}
+
+/* This just creates the circle for the "MonMon" */
+.nav-logo{
+    border: 2px solid red;
+    border-radius: 50%;
+    height: 60px;
+    width: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    color: white;
+    margin: 0 2rem;
+}
+
+.nav-logo p{
+    font-size: 1.5rem;
+}
+
+/*Logo link is both the text and the circle*/
+/* The logo is also a way to get back to the homepage of the site by clicking on it so that's why it is also a link*/
+.logo-link{
+    font-family: 'Tilt neon', cursive;
+    text-decoration: none;
+}
+
+/* Styles for the navigation links "Home Menu Contact"*/
+.nav-menu{
+    display: flex;
+    list-style: none;
+    text-align: right;
+}
+
+#main-nav ul li{
+    margin: 0 2rem;
+}
+
+#main-nav ul li a{
+    color: white;
+    text-decoration: none;
+    position: relative;
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+
+#main-nav ul li a:hover{
+    color: var(--lightred);
+    transition: color .2s;
+}
+
+/* Creates a line below the links fades in at hovering and out when not */
+#main-nav ul li a::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: white;
+    bottom: 0;
+    left: 0;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .2s ease-in-out;
+}
+
+#main-nav ul li a:hover::before{
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+#main-nav ul li a:active{
+    color:  #d11322;
+}
+
+
+
+/** START OF HAMBURGER BUTTON FOR COLLAPSIBLE NAVBAR **/
+/* Contains the actual hamburger button*/
+.hamburger-btn{
+    display: none;    /*So that it doesn't show on larger viewports*/
+    position: absolute;
+    right: 2rem;
+    cursor: pointer;
+}
+
+.bar{
+    display: block;
+    width: 1.8rem;
+    height: .2rem;
+    margin: .5em;
+    border-radius: 5px;
+    -webkit-transition: all 0.3s ease;
+    transition: .4s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+    background-color: white;
+  }
+
+/** END OF HAMBURGER BUTTON FOR COLLAPSIBLE NAVBAR **/
+
+
+/** END OF NAVBAR STYLES **/
+
+
+/** BEGINNING OF Hero image and hero text styling section **/
+
+.hero-image{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.329), rgba(0, 0, 0, 0.568)), url(https://images.unsplash.com/photo-1617196034738-26c5f7c977ce?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80 );
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    height: 70vh;
+    width: 100%;  
+}
+
+.hero-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.hero-text p{
+    margin: 1em;
+    font-size: 1.3rem;
+}
+
+
+/** END OF HERO IMAGE OF THE SITE STYLE **/     
+
+/** START OF MAIN CONTENT **/
+main{
+    padding: 4em;
+}
+
+/**  START OF WEB INTRO STYLING **/
+
+/**  END OF WEB INTRO STYLING **/
+
+/** START OF MENU CATEGORY STYLING **/
+.menu-category-section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 4em;
+}
+.menu-category-item div{
+    border-radius: 50%;
+    border: 1px black solid;
+    width: 100px;
+    height: 100px;
+    margin: 1.5em;
+}
+
+/** END OF MENU CATEGORY STYLING **/
+
+
+/** END OF MAIN CONTENT**/
+
+/** ATTRIBUTION INSIDE IMAGE USED **/
+/* For attribution purposes for the images that I have used */
+/* The img-container and the img-attrib is for the attribution for the images; the styles that are inside is makes it so that the text is on top of the image. */
+.img-container{
+    position: relative;
+    display: inline-block;
+}
+
+.img-attrib {
+    font-size: .7rem;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 0 .5em .5em 0; /*right .5em bottom .5em*/
+    padding: .25em;
+    color: white;
+    background-color: rgba(0, 0, 0, .2) /* black with the opacity of .2*/
+}
+
+/** END OF ATTRIBUTION INSIDE IMAGE USED **/
+
+
+
+
+/** MEDIA QUERIES **/
+/* Media query for navigation bar*/
+@media only screen  and (max-width: 1024px){
+    /* Hamburger button will appear and animates once clicked using JS*/
+    .hamburger-btn{
+        display: block;
+    }
+    .hamburger-btn.active .bar:nth-child(1){
+        transform-origin: bottom;
+        transform: rotatez(45deg) translateX(5px)translateY(5px);
+    }
+    .hamburger-btn.active .bar:nth-child(2){
+        opacity: 0;
+    }
+    .hamburger-btn.active .bar:nth-child(3){
+        transform-origin: bottom;
+        transform: rotatez(-45deg) translateX(12px)translateY(-10px);
+    }
+    .nav-menu{
+        padding: 1.5rem;
+        z-index: 99999;
+        position: fixed;
+        left: 100%;
+        top: 90px;
+        gap: 1.5rem;
+        flex-direction: column;
+        align-items: center;
+        background-color: #262626;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        height: 100vh;
+    }
+    .nav-link{
+        margin: 2em;
+    }
+    .nav-menu.active{
+        left: 0;
+    }    
+}
