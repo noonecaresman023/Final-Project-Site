@@ -12,6 +12,12 @@ font-family: 'Tilt Neon', cursive;
  -  General Styling
  -  Navbar Styling
  -  Hero Image Styling
+ -  Web Intro Styling
+ -  Menu Category Styling
+ -  Why Us section Styling
+ -  Store hours Styling
+ -  Footer styling
+ -  Media Queries 
 
 
 */
@@ -27,7 +33,7 @@ font-family: 'Tilt Neon', cursive;
 
 :root{
     --darkgray:  #1b1b1b;
-    --lightgray: #444444;
+    --lightgray: #5b5b5b;
     --lightred:  #f81528;
     --darkgold: rgb(230, 197, 12);
 }
@@ -59,6 +65,12 @@ header{
 
 .special-h-style{
     color: var(--lightred);
+    font-family: 'Tilt Neon', cursive;
+}
+
+h2{
+    color: var(--darkgold);
+    margin: 1em;
 }
 
 /** END OF GENERAL STYLING **/
@@ -89,11 +101,12 @@ header{
     align-items: center;
     font-size: 1.5rem;
     color: white;
-    margin: 0 2rem;
+    margin: 0 4rem;
 }
 
 .nav-logo p{
     font-size: 1.5rem;
+    letter-spacing: 2px;
 }
 
 /*Logo link is both the text and the circle*/
@@ -151,7 +164,6 @@ header{
 }
 
 
-
 /** START OF HAMBURGER BUTTON FOR COLLAPSIBLE NAVBAR **/
 /* Contains the actual hamburger button*/
 .hamburger-btn{
@@ -167,7 +179,6 @@ header{
     height: .2rem;
     margin: .5em;
     border-radius: 5px;
-    -webkit-transition: all 0.3s ease;
     transition: .4s cubic-bezier(0.68, -0.6, 0.32, 1.6);
     background-color: white;
   }
@@ -186,7 +197,7 @@ header{
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
-    height: 70vh;
+    height: 80vh;
     width: 100%;  
 }
 
@@ -212,31 +223,167 @@ header{
 /** END OF HERO IMAGE OF THE SITE STYLE **/     
 
 /** START OF MAIN CONTENT **/
-main{
-    padding: 4em;
-}
 
 /**  START OF WEB INTRO STYLING **/
+.web-intro{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 2em;
+}
 
+.web-intro h2{
+    letter-spacing: 1.2px;
+}
+
+.web-intro p{
+    font-weight: 500;
+    letter-spacing: 1.2px;
+    line-height: 1.5;
+    width: 75%;
+}
 /**  END OF WEB INTRO STYLING **/
 
 /** START OF MENU CATEGORY STYLING **/
 .menu-category-section{
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding: 4em;
+    padding-bottom: 1.5em;
 }
-.menu-category-item div{
+
+/* Where the actual circles are contained */
+.category-container{
+    display: flex;
+    padding: 2em;
+}
+
+.menu-category-item-container a{
+    text-decoration: none;
+}
+
+/*The circle where the menu image is contained */
+.menu-category-item-container div{
     border-radius: 50%;
-    border: 1px black solid;
-    width: 100px;
-    height: 100px;
-    margin: 1.5em;
+    width: 125px;
+    height: 125px;
+    margin: 1.2em;
+    transition: all .2s ease-in-out;
+}
+
+.menu-category-item-container div:hover{
+    transform: scale(1.3); 
+}
+
+.sushi-img{
+    background: url(https://images.unsplash.com/photo-1562158074-d49fbeffcc91?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80);
+    /* By Luigi Pozzoli*/
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.sides-img{
+    background: url(https://images.unsplash.com/photo-1579887829114-282b4fa31072?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80);
+    /* By Jonathan Borba*/
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.desserts-img{
+    background: url(https://images.unsplash.com/photo-1563805042-7684c019e1cb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=627&q=80);
+    /* By Emile Mbunzama*/
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.drinks-img{
+    background: url(https://images.unsplash.com/photo-1527762055594-4956c0c8c617?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80);
+    /* By Mgg Vitchakorn*/
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Button styling for viewing the full menu*/
+.view-menu{
+    color: white;
+    background-color: black;
+    text-decoration: none;
+    padding: 1em;
+    border-radius: 10px;
+    width: 15%;
 }
 
 /** END OF MENU CATEGORY STYLING **/
+
+/** START OF "Why?" Section STYLING **/
+.why-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2em;
+    background-color: rgb(248, 245, 238);
+}
+
+.why-section-content{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 4em;
+    gap: 2em;
+    justify-content: center;
+    align-items: center;
+}
+
+.video-container{
+    margin: 0 auto;
+    width: 400px;
+    height: 300px;
+}
+
+.video-container iframe{
+    width: 100%;
+    height: 100%;
+}
+
+
+/** END OF "Why?" Section STYLING **/
+
+/** START OF STORE HOURS STYLING **/
+.store-hours{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2em;
+    flex-direction: column;
+    margin-bottom: 4em;
+}
+
+
+.table-container th, td{
+    text-align: center;
+    border: 1px dashed black;
+    padding: 1em;
+    text-align: center;
+}
+
+.last-call-cell{
+    font-weight: 700;
+    border: 1px solid black;
+}
+
+.monThu-time-cell, .friSat-time-cell{
+    border: 1px solid black;
+}
+
+
+/** END OF STORE HOURS STYLING **/
 
 
 /** END OF MAIN CONTENT**/
@@ -263,6 +410,16 @@ main{
 /** END OF ATTRIBUTION INSIDE IMAGE USED **/
 
 
+/** START OF FOOTER STYLING **/
+footer{
+    background-color: var(--lightgray);
+    height: 5rem;
+    width: 100%
+}
+
+/** END OF FOOTER STYLING **/
+
+
 
 
 /** MEDIA QUERIES **/
@@ -274,34 +431,35 @@ main{
     }
     .hamburger-btn.active .bar:nth-child(1){
         transform-origin: bottom;
-        transform: rotatez(45deg) translateX(5px)translateY(5px);
+        transform: rotateZ(45deg) translateX(5px)translateY(5px);
     }
     .hamburger-btn.active .bar:nth-child(2){
         opacity: 0;
     }
     .hamburger-btn.active .bar:nth-child(3){
         transform-origin: bottom;
-        transform: rotatez(-45deg) translateX(12px)translateY(-10px);
+        transform: rotateZ(-45deg) translateX(12px)translateY(-10px);
     }
+
     .nav-menu{
         padding: 1.5rem;
         z-index: 99999;
         position: fixed;
-        left: 100%;
+        right: -100%;
         top: 90px;
         gap: 1.5rem;
         flex-direction: column;
         align-items: center;
         background-color: #262626;
-        width: 100%;
-        text-align: center;
+        width: 80%;
         transition: 0.3s;
         height: 100vh;
+        opacity: 95%;
     }
     .nav-link{
         margin: 2em;
     }
     .nav-menu.active{
-        left: 0;
+        right: 0;
     }    
 }
