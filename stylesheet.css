@@ -8,7 +8,8 @@ font-family: 'Tilt Neon', cursive;
 */
 
 /*
-    CSS Styling Format:
+    CSS Styling Guide:
+
  -  General Styling
  -  Navbar Styling
  -  Hero Image Styling
@@ -18,6 +19,7 @@ font-family: 'Tilt Neon', cursive;
  -  Store hours Styling
  -  Footer styling
  -  Media Queries 
+    - Media Queries for index.html
 
 
 */
@@ -368,9 +370,10 @@ h2{
 
 .table-container th, td{
     text-align: center;
-    border: 1px dashed black;
+    border: 2px black dotted;
     padding: 1em;
     text-align: center;
+    border-radius: 2px;
 }
 
 .last-call-cell{
@@ -423,7 +426,7 @@ footer{
 
 
 /** MEDIA QUERIES **/
-/* Media query for navigation bar*/
+/** Media query for navigation bar**/
 @media only screen  and (max-width: 1024px){
     /* Hamburger button will appear and animates once clicked using JS*/
     .hamburger-btn{
@@ -462,4 +465,54 @@ footer{
     .nav-menu.active{
         right: 0;
     }    
+}
+
+/** Media Queries for INDEX.HTML !!**/
+@media only screen  and (max-width: 360px){
+    .category-container{
+        flex-direction: column;
+    }
+    .view-menu{
+        width: 40%;
+    }
+
+    .why-section-content{
+        grid-template-columns: 1fr;
+    }
+
+    .why-section-content p{
+        padding: 0 4em;
+    }
+
+    .video-container{
+        padding: 0 4em;
+    }
+}
+
+@media only screen and (min-width: 361px) and (max-width: 768px){
+    .category-container{
+        flex-direction: column;
+    }
+    .view-menu{
+        width: 40%;
+    }
+
+    .why-section-content{
+        grid-template-columns: 1fr;
+    }
+
+    .why-section-content p{
+        padding: 0 4em;
+    }
+
+    .video-container{
+        padding: 0 4em;
+    }
+
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    .why-section-content{
+        grid-template-columns: 1fr;
+    }
 }
