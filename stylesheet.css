@@ -68,7 +68,7 @@ body{
 
 header{
     /* The whole purpose of this is to remove horizontal scrolling on smaller viewports*/
-    overflow: hidden;
+/*     overflow: hidden; */
 }
 
 .special-h-style{
