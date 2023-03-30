@@ -851,6 +851,8 @@ input[type=submit]:hover {
 
 }
 
+
+
 /* Mobile phones and tablets */
 @media only screen and (min-width: 361px) and (max-width: 768px) {
 
@@ -942,6 +944,20 @@ input[type=submit]:hover {
     }
 
 
+}
+
+/** Media Queries for Styling the menu.html **/
+@media only screen and (min-width: 361px) and (max-width: 659px) {
+    .menu-item-container {
+        grid-template-columns: auto;
+        grid-template-areas:
+            "item-1"
+            "item-2"
+            "item-3"
+            "item-4"
+            "item-5"
+            "item-6";
+    }
 }
 
 /*tablets and bigger screens just to clean things up a bit */
